@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Category;
+use App\Models\category;
 
 
 class CategorySeeder extends Seeder
@@ -18,7 +18,7 @@ class CategorySeeder extends Seeder
         $cats=['cat one', 'cat two ' , 'cat three'];
 
         foreach($cats as $cat){
-            Category::Create([
+            category::Create([
                 'ar'=>["name"=>$cat],
                 'en'=>["name"=>$cat],
             ]); 
