@@ -16,7 +16,7 @@ class DashboardController extends Controller
 {
     function index (){
 
-        $categories_count=Category::all()->count();
+        $categories_count=category::all()->count();
         $clients_count=Client::all()->count();
         $products_count=product::all()->count();
         $users_count=User::whereRoleIs()->count();
