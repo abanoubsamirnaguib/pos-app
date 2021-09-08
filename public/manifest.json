@@ -27,7 +27,7 @@
       "type": "image/png"
     }],
   "lang": "en-US",
-  "start_url": "/login",
+  "start_url": "/public/login",
   "display": "standalone",
   "background_color": "blue",
   "theme_color": "black"
