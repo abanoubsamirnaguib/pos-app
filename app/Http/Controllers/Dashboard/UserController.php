@@ -75,7 +75,7 @@ class UserController extends Controller
         $user->syncPermissions($request->permissions);
 
         $request->session()->flash('success', __('site.added_successfully'));
-        return redirect(route('dashboard.welcome'));
+        return redirect()->route('dashboard.welcome');
     }
 
     public function edit(User $user)
@@ -110,7 +110,7 @@ class UserController extends Controller
         $user->syncPermissions($request->permissions);
 
         $request->session()->flash('success', __('site.updated_successfully'));
-        return redirect(route('dashboard.welcome'));
+        return redirect()->route('dashboard.welcome');
     }
 
     public function destroy(User $user, Request $request)
