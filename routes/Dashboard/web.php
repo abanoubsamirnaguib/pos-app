@@ -7,7 +7,7 @@ use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\productController;
 use App\Http\Controllers\Dashboard\ClientController;
 use App\Http\Controllers\Dashboard\Clients\OrderController;
-use App\Http\Controllers\Dashboard\OrderController as OrderController2 ;
+use App\Http\Controllers\Dashboard\orderController as OrderController2 ;
 
 /*
 |--------------------------------------------------------------------------
