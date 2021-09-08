@@ -70,7 +70,9 @@
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $client->name }}</td>
-                                    <td>{{ is_array($client->phone) ? implode('-',$client->phone) : $client->phone }}</td>
+                                    <td> <a href="tel:{{ is_array($client->phone) ? implode('-',$client->phone) : $client->phone }}">
+                                        {{ is_array($client->phone) ? implode('-',$client->phone) : $client->phone }}</a>
+                                    </td>
                                     <td>{{ $client->address }}</td>
                                     <td>
                                         @if (auth()->user()->hasPermission('create_order'))
