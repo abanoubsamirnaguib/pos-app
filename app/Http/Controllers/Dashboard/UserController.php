@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Permission;
 use Illuminate\Http\Request;
 use  Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Storage;
@@ -71,8 +72,15 @@ class UserController extends Controller
 
         $user = User::Create ($request_data);
         $user->attachRole('admin');
-        
-        $user->syncPermissions($request->permissions);
+
+        $per_ids=[];
+        foreach($request->permissions as $i=> $per){
+            $per_id=Permission::select("id")->where("name" , $per)->first()->id;
+            $per_ids[$i] = $per_id;
+        }
+
+        $user->syncPermissions($per_ids);
+        // $user->syncPermissions($request->permissions);
 
         $request->session()->flash('success', __('site.added_successfully'));
         return redirect()->route('dashboard.welcome');
@@ -105,10 +113,17 @@ class UserController extends Controller
             $request_data['image'] = $request->image->getClientOriginalName();
         }
         
-        $user->syncPermissions($request->permissions);
         $user ->update($request_data);
 
-        dd($request->permissions);
+        // dd($request->permissions);
+        $per_ids=[];
+        foreach($request->permissions as $i=> $per){
+            $per_id=Permission::select("id")->where("name" , $per)->first()->id;
+            $per_ids[$i] = $per_id;
+        }
+
+        $user->syncPermissions($per_ids);
+
         $request->session()->flash('success', __('site.updated_successfully'));
         return redirect()->route('dashboard.welcome');
     }
