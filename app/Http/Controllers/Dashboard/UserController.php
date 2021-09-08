@@ -104,11 +104,11 @@ class UserController extends Controller
             })->save(public_path('/uploads/user_images/'.$request->image->getClientOriginalName() ) );
             $request_data['image'] = $request->image->getClientOriginalName();
         }
-    
+        
+        $user->syncPermissions($request->permissions);
         $user ->update($request_data);
 
-        $user->syncPermissions($request->permissions);
-
+        dd($request->permissions);
         $request->session()->flash('success', __('site.updated_successfully'));
         return redirect()->route('dashboard.welcome');
     }
