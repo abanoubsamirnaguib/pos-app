@@ -25,7 +25,7 @@ class DashboardController extends Controller
                 selectRaw('YEAR (created_at) as year ')->
                 selectRaw('MONTH (created_at) as month ')->
                 selectRaw('SUM (total_price) as sum')
-        ->groupByRaw('month, year')->get();
+        ->groupBy('month, year')->get();
 
         // dd( $sales_data );
         return view("dashboard.welcome",
