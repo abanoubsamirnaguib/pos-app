@@ -21,11 +21,11 @@ class DashboardController extends Controller
         $products_count=product::all()->count();
         $users_count=User::whereRoleIs()->count();
 
-        $sales_data = order::
-                selectRaw('YEAR (created_at) as year ')->
-                selectRaw('MONTH (created_at) as month ')->
-                selectRaw('SUM (total_price) as sum')
-        ->groupBy('month, year')->get();
+        // $sales_data = order::
+        //         selectRaw('YEAR (created_at) as year ')->
+        //         selectRaw('MONTH (created_at) as month ')->
+        //         selectRaw('SUM (total_price) as sum')
+        // ->groupBy('month, year')->get();
 
         // dd( $sales_data );
         return view("dashboard.welcome",
@@ -33,7 +33,7 @@ class DashboardController extends Controller
         "products_count"=>$products_count ,
         "clients_count"=>$clients_count,
         "users_count"=>$users_count,
-        'sales_data'=>$sales_data
+        // 'sales_data'=>$sales_data
     ]);
     }
 }
