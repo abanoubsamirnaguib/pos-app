@@ -17,13 +17,13 @@ class CategoryController extends Controller
     {
         if($request->search){
 
-        $categories=Category::when($request->search , function($query) use ($request)  {
+        $categories=category::when($request->search , function($query) use ($request)  {
                 
             return   $query->whereTranslationLike("name" ,  "%". $request->search . "%" );
             })->latest()->paginate(5);
         }
         else {
-        $categories=Category::paginate(5);
+        $categories=category::paginate(5);
             }
             // return (($categories));
         return view('dashboard.categories.index',['categories'=>$categories]);
@@ -31,7 +31,7 @@ class CategoryController extends Controller
 
     public function create()
     {
-        $categories=Category::all();
+        $categories=category::all();
         return view('dashboard.categories.create',['categories'=>$categories]);
     }
 
@@ -50,7 +50,7 @@ class CategoryController extends Controller
 
         $request_data=$request->all();     
 
-        $category = Category::Create ($request_data);
+        $category = category::Create ($request_data);
             
         $request->session()->flash('success', __('site.added_successfully'));
         return redirect(route('dashboard.categories.index'));
@@ -62,7 +62,7 @@ class CategoryController extends Controller
 
     }
 
-    public function update(Request $request, Category $category)
+    public function update(Request $request, category $category)
     {
         $rules=[];
         foreach(config('translatable.locales') as $locale)  

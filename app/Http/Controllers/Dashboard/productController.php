@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 use App\Models\product;
-use App\Models\Category;
+use App\Models\category;
 use Illuminate\Http\Request;
 use App\Models\productTranslations ;
 use  Intervention\Image\ImageManagerStatic as Image;
@@ -17,7 +17,7 @@ class productController extends Controller
     public function index(Request $request)
     {
         // $products=product::paginate(5);
-        $categories=Category::all();
+        $categories=category::all();
 
         if($request->search  or $request->category_id){
 
@@ -39,7 +39,7 @@ class productController extends Controller
 
     public function create()
     {
-        $categories=Category::all();
+        $categories=category::all();
         return view('dashboard.products.create',['categories'=>$categories]);
     }
 
@@ -85,7 +85,7 @@ class productController extends Controller
 
     public function edit(product $product)
     {
-        $categories=Category::all();
+        $categories=category::all();
         return view("dashboard.products.edit",['categories'=>$categories,'product'=>$product]);
     
     }

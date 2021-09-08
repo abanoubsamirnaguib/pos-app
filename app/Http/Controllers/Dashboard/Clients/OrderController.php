@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard\Clients;
 use App\Http\Controllers\Controller;
 use App\Models\order;
 use App\Models\Client;
-use App\Models\Category;
+use App\Models\category;
 use App\Models\product;
 use Illuminate\Http\Request;
 
@@ -20,7 +20,7 @@ class OrderController extends Controller
 
     public function create(Client $client)
     {
-               $categories = Category::all();
+               $categories = category::all();
                $orders= $client->orders()->paginate(5);
         return view( 'dashboard.clients.orders.create', ['orders'=>$orders,'client'=>$client,'categories'=>$categories] );
     }
@@ -42,7 +42,7 @@ class OrderController extends Controller
 
     public function edit(Client $client,order $order)
     {
-        $categories = Category::all();
+        $categories = category::all();
         $orders= $client->orders()->paginate(5);
         return view( 'dashboard.clients.orders.edit', ['client'=>$client,'order'=> $order,'orders'=> $orders,'categories'=>$categories] );
     }
