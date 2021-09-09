@@ -93,8 +93,8 @@
         {{--<!-- Logo -->--}}
         <a href="{{ asset('dashboard') }}/index2.html" class="logo">
             {{--<!-- mini logo for sidebar mini 50x50 pixels -->--}}
-            <span class="logo-mini"><b>A</b>LT</span>
-            <span class="logo-lg"><b>Admin</b>LTE</span>
+            <span class="logo-mini"><b>S</b>hop</span>
+            <span class="logo-lg"><b>Shop</b>App</span>
         </a>
 
         <nav class="navbar navbar-static-top">
