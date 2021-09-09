@@ -8,20 +8,30 @@ use App\Models\category;
 
 class CategorySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
+
+
+
     public function run()
     {
-        $cats=['cat one', 'cat two ' , 'cat three'];
+        // $cats=['cat one', 'cat two ' , 'cat three'];
 
-        foreach($cats as $cat){
-            category::Create([
-                'ar'=>["name"=>$cat],
-                'en'=>["name"=>$cat],
-            ]); 
+        $cats = [
+            ["ar" => "موبيلات"  , 'en' =>'phones'],
+            ["ar" => "تلفزيونات"  , 'en' =>'tvs'],
+            ["ar" => "لابتوب"  , 'en' =>'laptop'],
+            ["ar" => "اثاث"  , 'en' =>'furniture'],
+            ["ar" => "العاب"  , 'en' =>'Toys']
+        ];
+
+        foreach($cats as $key => $cat){
+            // foreach($cat as  $val){
+            category::Create(
+                [
+                 "ar" => ["name"=>$cat['ar']],
+                 "en" => ["name"=>$cat['en']]
+               ]                
+            ); 
         }
 
     }
