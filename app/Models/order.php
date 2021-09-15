@@ -13,7 +13,7 @@ class order extends Model
     public $guarded = [];
 
     protected $casts = [
-        'YEAR(created_at)' => 'timestamp',
+        'year' => 'timestamp',
     ];
     public function client()
     {
