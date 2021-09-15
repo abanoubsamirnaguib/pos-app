@@ -9,9 +9,6 @@ use App\Models\category;
 class CategorySeeder extends Seeder
 {
 
-
-
-
     public function run()
     {
         // $cats=['cat one', 'cat two ' , 'cat three'];
