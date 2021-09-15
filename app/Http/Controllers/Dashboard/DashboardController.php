@@ -34,7 +34,7 @@ class DashboardController extends Controller
         "products_count"=>$products_count ,
         "clients_count"=>$clients_count,
         "users_count"=>$users_count,
-        'sales_data'=>$sales_data
+        // 'sales_data'=>$sales_data
     ]);
     }
 }
