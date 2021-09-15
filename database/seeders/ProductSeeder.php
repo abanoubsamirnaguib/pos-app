@@ -10,7 +10,7 @@ class ProductSeeder extends Seeder
 
     public function run()
     {
-        $cats=['prod one', 'prod two ' , 'prod three'];
+        // $cats=['prod one', 'prod two ' , 'prod three'];
 
         include('prod.php');
 
