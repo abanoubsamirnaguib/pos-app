@@ -12,7 +12,9 @@ class order extends Model
     use HasFactory;
     public $guarded = [];
 
-
+    protected $casts = [
+        'YEAR(created_at)' => 'timestamp',
+    ];
     public function client()
     {
         return $this->belongsTo(Client::class );
