@@ -15,6 +15,8 @@ class order extends Model
     protected $casts = [
         'year' => 'datetime',
     ];
+    protected $dateFormat = 'Y-m-d H:i:sO';
+    
     public function client()
     {
         return $this->belongsTo(Client::class );
