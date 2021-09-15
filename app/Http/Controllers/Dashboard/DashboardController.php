@@ -22,12 +22,13 @@ class DashboardController extends Controller
         $users_count=User::whereRoleIs()->count();
 
         $sales_data = order::
-                selectRaw('YEAR(created_at) as year ')->
-                selectRaw('MONTH(created_at) as month ')->
+                selectRaw('YEAR(created_at) as year')->
+                selectRaw('MONTH(created_at) as month')->
                 selectRaw('SUM(total_price) as sum')
-        ->groupBy('month, year')->get();
+                ->groupBy( 'year' ,'month' )
+                ->get();
 
-        dd( $sales_data );
+        // dd( $sales_data );
         return view("dashboard.welcome",
         ["categories_count"=>$categories_count,
         "products_count"=>$products_count ,
