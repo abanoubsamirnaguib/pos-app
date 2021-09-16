@@ -118,9 +118,9 @@
         element: 'line-chart',
         resize: true,
         data: [
-            @foreach ($sales_data as $data)
+            @foreach ($sales_data as $i => $data)
             {
-                {{$data}}
+                {{ $data[$i] }}
                 ym: "{{ $data->year }}-{{ $data->month }}", sum: "{{ $data->sum }}"
             },
             @endforeach
