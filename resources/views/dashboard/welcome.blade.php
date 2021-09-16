@@ -120,6 +120,7 @@
         data: [
             @foreach ($sales_data as $data)
             {
+                {{$data}}
                 ym: "{{ $data->year }}-{{ $data->month }}", sum: "{{ $data->sum }}"
             },
             @endforeach
