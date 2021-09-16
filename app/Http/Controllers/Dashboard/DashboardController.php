@@ -27,7 +27,7 @@ class DashboardController extends Controller
                 selectRaw('SUM(total_price) as sum')
                 ->groupBy( 'year' ,'month' )
                 ->get();
-                
+
                 $sales_data =[];
                 foreach ($sales_data1 as $i=>$data){
                 $sales_data [$i] = [
@@ -36,6 +36,7 @@ class DashboardController extends Controller
                     "sum" => $data->sum
                 ];
             };
+            $sales_data = collect($sales_data);
         // dd( $sales_data );
         return view("dashboard.welcome",
         ["categories_count"=>$categories_count,
