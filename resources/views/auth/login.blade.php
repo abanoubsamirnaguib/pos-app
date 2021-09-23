@@ -33,15 +33,15 @@
 
 </head>
 <body class="login-page">
-
+    
+    <div class="row">
+        <div class="col">
 <div class="login-box">
 
     <div class="login-logo">
         <a href="{{route("dashboard.welcome")}}"><b>Admin</b> page</a>
     </div><!-- end of login lgo -->
 
-    <div class="row">
-        <div class="col">
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
