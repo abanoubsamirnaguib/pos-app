@@ -67,9 +67,12 @@
 
         </form><!-- end of form -->
 
-        hello
     </div><!-- end of login body -->
-
+    
+    You Can Login as 
+    admin@admin.com 
+    123456
+    
 </div><!-- end of login-box -->
 
 {{--<!-- jQuery 3 -->--}}
