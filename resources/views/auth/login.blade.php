@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
 
     <title>poss app | Log in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{--<!-- Bootstrap 3.3.7 -->--}}
     <link rel="stylesheet" href="{{ asset('dashboard_files/css/bootstrap.min.css') }}">
@@ -32,16 +33,16 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
 </head>
+
 <body class="login-page">
     
-    <div class="row">
-        <div class="col">
-<div class="login-box">
+    <div class="login-box">
+        
+        <div class="login-logo">
+            <a href="{{route("dashboard.welcome")}}"><b>Admin</b> page</a>
+        </div><!-- end of login lgo -->
 
-    <div class="login-logo">
-        <a href="{{route("dashboard.welcome")}}"><b>Admin</b> page</a>
-    </div><!-- end of login lgo -->
-
+        
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
@@ -70,8 +71,7 @@
         </form><!-- end of form -->
 
     </div><!-- end of login body -->
-</div>
-</div>
+
     <div class="form-group login-box-body" style="background-color: white">
         
         You Can Login as 
