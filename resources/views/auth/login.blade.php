@@ -67,6 +67,7 @@
 
         </form><!-- end of form -->
 
+        hello
     </div><!-- end of login body -->
 
 </div><!-- end of login-box -->
