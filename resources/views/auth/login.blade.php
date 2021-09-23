@@ -42,7 +42,7 @@
             <a href="{{route("dashboard.welcome")}}"><b>Admin</b> page</a>
         </div><!-- end of login lgo -->
 
-        
+
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
@@ -58,7 +58,7 @@
             </div>
 
             <div class="form-group has-feedback">
-                <input type="password" name="password" class="form-control" placeholder="@lang('site.password')">
+                <input type="password" name="password" class="form-control" placeholder="@lang('site.password')" number >
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
 

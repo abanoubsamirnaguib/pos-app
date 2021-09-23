@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="content-wrapper">
+    <div class="content-wrapper" >
 
         <section class="content-header">
 
@@ -20,7 +20,7 @@
 
         <section class="content">
 
-            <div class="box box-primary">
+            <div class="box box-primary" >
 
                 <div class="box-header with-border">
 
@@ -57,11 +57,11 @@
 
                 </div><!-- end of box header -->
 
-                <div class="box-body">
+                <div class="box-body" style="overflow-x: scroll">
 
                     @if ($products->count() > 0)
 
-                        <table class="table table-hover">
+                        <table class="table table-hover" >
 
                             <thead>
                             <tr>

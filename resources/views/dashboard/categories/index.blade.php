@@ -18,7 +18,7 @@
 
         <section class="content">
 
-            <div class="box box-primary">
+            <div class="box box-primary" style="overflow-x: scroll">
 
                 <div class="box-header with-border">
 
