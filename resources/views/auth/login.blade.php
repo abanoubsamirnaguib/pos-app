@@ -69,10 +69,13 @@
 
     </div><!-- end of login body -->
     
-    You Can Login as 
-    admin@admin.com 
-    123456
-    
+    <div class="bg-light form-group">
+        
+        You Can Login as 
+        <br> admin@admin.com 
+        <br> 123456
+    </div>
+
 </div><!-- end of login-box -->
 
 {{--<!-- jQuery 3 -->--}}
