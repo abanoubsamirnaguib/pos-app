@@ -40,6 +40,8 @@
         <a href="{{route("dashboard.welcome")}}"><b>Admin</b> page</a>
     </div><!-- end of login lgo -->
 
+    <div class="row">
+        <div class="col">
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
@@ -68,7 +70,8 @@
         </form><!-- end of form -->
 
     </div><!-- end of login body -->
-    
+</div>
+</div>
     <div class="form-group login-box-body" style="background-color: white">
         
         You Can Login as 
