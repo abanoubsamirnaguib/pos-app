@@ -69,15 +69,15 @@
 
     </div><!-- end of login body -->
     
-    <div class="bg-light form-group">
-        
-        You Can Login as 
-        <br> admin@admin.com 
-        <br> 123456
-    </div>
-
+    
 </div><!-- end of login-box -->
 
+<div class="bg-light form-group">
+    
+    You Can Login as 
+    <br> admin@admin.com 
+    <br> 123456
+</div>
 {{--<!-- jQuery 3 -->--}}
 <script src="{{ asset('dashboard_files/js/jquery.min.js') }}"></script>
 
