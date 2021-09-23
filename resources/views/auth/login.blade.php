@@ -69,7 +69,7 @@
 
     </div><!-- end of login body -->
     
-    <div class="form-group" style="background-color: white">
+    <div class="form-group login-box-body" style="background-color: white">
         
         You Can Login as 
         <br> admin@admin.com 
